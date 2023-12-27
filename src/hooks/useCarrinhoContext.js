@@ -59,7 +59,7 @@ export const useCarrinhoContext = () => {
     useEffect(() => {
       const { totalTemp, quantidadeTemp} = carrinho.reduce((acumulador, produto) => ({
           quantidadeTemp: acumulador.quantidadeTemp + produto.quantidade,
-          totalTempo: acumulador.totalTempo + (produto.preco*produto.quantidade)
+          totalTemp: acumulador.totalTemp + (produto.preco*produto.quantidade)
         }),
           {
             quantidadeTemp: 0,
@@ -75,7 +75,9 @@ export const useCarrinhoContext = () => {
         setCarrinho,
         adicionarProduto,
         removerProduto,
-        removerProdutoCarrinho
+        removerProdutoCarrinho,
+        valorTotal,
+        quantidade
     };
   
 }

@@ -14,7 +14,8 @@ export const CarrinhoProvider = ({ children }) => {
         <CarrinhoContext.Provider value={{
             carrinho, setCarrinho,
             quantidade, setQuantidade,
-            valorTotal, setValorTotal}}>
+            valorTotal, setValorTotal
+        }}>
             {children}
         </CarrinhoContext.Provider>
     )
