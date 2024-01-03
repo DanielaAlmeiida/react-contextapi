@@ -1,9 +1,10 @@
 import React, { createContext, useReducer, useState } from "react";
+import { carrinhoReducer } from "../reducers/carrinhoReducer";
 
 export const CarrinhoContext = createContext();
 CarrinhoContext.displayName = "Carrinho";
 
-const estadoInicial = []
+const estadoInicial = [];
 
 export const CarrinhoProvider = ({ children }) => {
     const [carrinho, dispatch] = useReducer(carrinhoReducer, estadoInicial);
