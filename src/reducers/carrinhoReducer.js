@@ -2,6 +2,7 @@ export const ADD_PRODUTO = "ADD_PRODUTO";
 export const REMOVE_PRODUTO = "REMOVE_PRODUTO";
 export const UPDATE_QUANTIDADE = "UPDATE_QUANTIDADE";
 
+//state é como se fosse o carrinho
 export const carrinhoReducer = (state, action) => {
     switch (action.type) {
         case ADD_PRODUTO:
@@ -28,6 +29,9 @@ export const carrinhoReducer = (state, action) => {
             return state.map((item) =>
                 item.id === id ? { ...item, quantidade } : item
             );
+
+        default:
+            return state;
               
     }
 }
